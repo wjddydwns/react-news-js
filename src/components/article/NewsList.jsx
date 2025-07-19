@@ -17,7 +17,7 @@ const NewsList = () => {
   
       try {
         // page와 pageSize 파라미터 추가!
-        const url = `https://localhost:5000/api/news`;
+        const url = `https://newsapi.org/v2/top-headlines?country=us&page=${page}&pageSize=${pageSize}&apiKey=${API_KEY}`;
         console.log("요청한 url", url);
 
         const res = await axios.get(url);
